@@ -2,11 +2,6 @@ package tj.rs.devteam.app.roundedbottomnavigation;
 
 import java.io.Serializable;
 
-/**
- * Author: wangjie
- * Email: tiantian.china.2@gmail.com
- * Date: 5/25/15.
- */
 public class ShadowProperty implements Serializable {
     public static final int ALL = 0x1111;
     public static final int LEFT = 0x0001;
@@ -14,26 +9,12 @@ public class ShadowProperty implements Serializable {
     public static final int RIGHT = 0x0100;
     public static final int BOTTOM = 0x1000;
 
-    /**
-     * 阴影颜色
-     */
     private int shadowColor;
-    /**
-     * 阴影半径
-     */
+
     private int shadowRadius;
-    /**
-     * 阴影x偏移
-     */
     private int shadowDx;
-    /**
-     * 阴影y偏移
-     */
     private int shadowDy;
 
-    /**
-     * 阴影边
-     */
     private int shadowSide = ALL;
 
     public int getShadowSide() {

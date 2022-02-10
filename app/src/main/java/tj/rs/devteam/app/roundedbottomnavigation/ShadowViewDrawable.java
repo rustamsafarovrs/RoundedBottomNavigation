@@ -10,17 +10,6 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 
-/**
- * <code>
- * if (Build.VERSION.SDK_INT > Build.VERSION_CODES.HONEYCOMB) {
- * view.setLayerType(View.LAYER_TYPE_SOFTWARE, drawable.getPaint());
- * }
- * </code>
- * <p/>
- * Author: wangjie
- * Email: tiantian.china.2@gmail.com
- * Date: 5/2/15.
- */
 public class ShadowViewDrawable extends Drawable {
     private Paint paint;
 
@@ -47,16 +36,10 @@ public class ShadowViewDrawable extends Drawable {
 
         paint = new Paint();
         paint.setAntiAlias(true);
-        /**
-         * 解决旋转时的锯齿问题
-         */
         paint.setFilterBitmap(true);
         paint.setDither(true);
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(color);
-        /**
-         * 设置阴影
-         */
         paint.setShadowLayer(shadowProperty.getShadowRadius(), shadowProperty.getShadowDx(), shadowProperty.getShadowDy(), shadowProperty.getShadowColor());
 
         drawRect = new RectF();
