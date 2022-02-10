@@ -5,11 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import tj.rs.devteam.app.roundedbottomnavigation.databinding.ActivityMainBinding
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,10 +31,14 @@ class MainActivity : AppCompatActivity() {
             )
             .setShadowDy(0)
             .setShadowDx(0)
-            .setShadowRadius(24)
+            .setShadowRadius(resources.getDimensionPixelSize(R.dimen.dp_14))
             .setShadowSide(ShadowProperty.ALL)
-        val sd = ShadowViewDrawable(sp, Color.WHITE, 48f, 48f)
-        ViewCompat.setBackground(binding.materialCardView, sd)
+        val sd = ShadowViewDrawable(
+            sp, Color.WHITE,
+            resources.getDimensionPixelSize(R.dimen.dp_48).toFloat(),
+            resources.getDimensionPixelSize(R.dimen.dp_48).toFloat()
+        )
+        binding.materialCardView.background = sd
         binding.materialCardView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
 
     }

@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@null"
-            android:src="@drawable/ic_bg_loading"/>
+            android:src="@drawable/ic_bg_loading"
+            android:visibility="gone" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/material_card_view"
@@ -35,6 +36,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view2"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_margin="24dp"
