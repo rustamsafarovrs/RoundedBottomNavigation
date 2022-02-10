@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
  * github.com/rustamsafarovrs
  */
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
 
     fun onHomeBtnClick() {
 
